@@ -1,0 +1,2 @@
+#チーム
+setblock ~ ~ ~ minecraft:birch_wall_sign{Text1:'{"text":"------------------","color":"black"}',Text2:'{"text":"チーム","bold":true,"color":"black","clickEvent":{"action":"run_command","value":"execute positioned 8 ~1 ~ run function ex3:lobby/menu/parts/team/open"}}',Text3:'{"text":"右クリック","color":"black"}',Text4:'{"text":"------------------","color":"black"}'}

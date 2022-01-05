@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:pumpkin_pie",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "固定砲台","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Active","italic": false,"color": "green"},{"text":" / ","color":"white"},
+                  {"text": "10s ～ 使用時間 x 1.5","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "地上で右クリック","italic": false,"color": "yellow"}],
+                {"text":"自身を固定砲台化する。","italic": false,"color": "white"},
+                {"text":"効果中は矢の消費を打ち消し、","italic": false,"color": "white"},
+                {"text":"射出速度を50%上昇させる。","italic": false,"color": "white"},
+                {"text":"2度目の発動/ダメージを受ける","italic": false,"color": "white"},
+                {"text":"のどちらかを満たすと解除され、","italic": false,"color": "white"},
+                {"text":"3秒間移動速度低下と盲目のデバフを受ける。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:10s,e-time:20s,CustomModelData:30035}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

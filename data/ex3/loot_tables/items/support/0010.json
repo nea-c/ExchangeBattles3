@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:basalt",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "骨砕き","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"+ ","italic": false,"color":"white"},{"text": "常時","italic": false,"color": "gold"}],
+                {"text": "与えるダメージが20%増加するが、","italic": false,"color": "white"},
+                {"text": "受けるダメージが20%増加する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,CustomModelData:20010,AttributeModifiers:[{}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

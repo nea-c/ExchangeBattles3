@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "root": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:pumpkin_pie"
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "ex3:items/skill/0035/use_check"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:twisting_vines",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "呪縛","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Active","italic": false,"color": "green"},{"text":" / ","color":"white"},
+                  {"text": "20s","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "スニーク","italic": false,"color": "yellow"}],
+                {"text": "発動から2秒後、視点先に邪念を開放する。","italic": false,"color": "white"},
+                {"text": "敵にヒット/ブロックに衝突","italic": false,"color": "white"},
+                {"text": "のどちらかを満たすと展開し、","italic": false,"color": "white"},
+                {"text": "その周囲の敵を5秒間視界不良にする。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:20s,CustomModelData:30025}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

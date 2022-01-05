@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:light_gray_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "クイックリロード","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Passive","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "20s","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "矢のリロード","italic": false,"color": "yellow"}],
+                {"text": "即座にリロードを完了する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:20s,CustomModelData:30020}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

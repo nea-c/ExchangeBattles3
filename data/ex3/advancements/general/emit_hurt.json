@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "root": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "type": {
+            "is_explosion": false,
+            "is_fire": false,
+            "is_magic": false,
+            "is_projectile": false,
+            "is_lightning": false,
+            "bypasses_armor": false,
+            "bypasses_invulnerability": false,
+            "bypasses_magic": false
+          }
+        },
+        "entity": {
+          "type": "minecraft:shulker",
+          "nbt": "{Tags:[\"emit_object\"]}"
+        }
+      }
+    }
+  }
+}

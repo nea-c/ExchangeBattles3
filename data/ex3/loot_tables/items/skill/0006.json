@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:prismarine",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "レリーヴストーン","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Active","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "25s","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "攻撃","italic": false,"color": "yellow"}],
+                {"text": "前方に攻撃を行う。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "スニーク","italic": false,"color": "yellow"}],
+                {"text": "ダメージを一度だけ80%軽減する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "ジャンプ","italic": false,"color": "yellow"}],
+                {"text": "自身を除く周囲4mの味方2人を回復させる。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:25s,CustomModelData:30006}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

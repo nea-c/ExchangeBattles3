@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text": "+ ","italic": false,"color": "white"},{"text": "ウェポン","italic": false,"color": "yellow"}],
+                {"block": "0 0 0","nbt": "Items[{Slot:2b}].tag.display.Name","interpret": true},
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text": "+ ","italic": false,"color": "white"},{"text": "サポート","italic": false,"color": "yellow"}],
+                {"block": "0 0 0","nbt": "Items[{Slot:3b}].tag.display.Name","interpret": true},
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text": "+ ","italic": false,"color": "white"},{"text": "スキルスロット1","italic": false,"color": "yellow"}],
+                {"block": "0 0 0","nbt": "Items[{Slot:4b}].tag.display.Name","interpret": true},
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text": "+ ","italic": false,"color": "white"},{"text": "スキルスロット2","italic": false,"color": "yellow"}],
+                {"block": "0 0 0","nbt": "Items[{Slot:5b}].tag.display.Name","interpret": true},
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text": "+ ","italic": false,"color": "white"},{"text": "スキルスロット3","italic": false,"color": "yellow"}],
+                {"block": "0 0 0","nbt": "Items[{Slot:6b}].tag.display.Name","interpret": true},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ],
+              "entity": "this"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

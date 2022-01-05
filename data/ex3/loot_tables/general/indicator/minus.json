@@ -1,0 +1,27 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                [
+                  {"text":"-","italic": false,"color":"red"},
+                  {"score": {"name":"@s","objective": "health"},"italic": false,"color":"red"},
+                  {"text":".","italic": false,"color":"red"},
+                  {"score": {"name":"@s","objective": "health_display"},"italic": false,"color":"red"}
+                ]
+              ],
+              "entity": "this"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

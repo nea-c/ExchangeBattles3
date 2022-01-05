@@ -1,0 +1,14 @@
+{
+    "criteria": {
+      "root": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:shield"
+            ]
+          }
+        }
+      }
+    }
+  }

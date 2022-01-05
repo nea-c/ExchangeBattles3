@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "ギャンブラー","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"+ ","italic": false,"color":"white"},{"text": "常時","italic": false,"color": "gold"}],
+                {"text": "近接攻撃力が0.5倍から1.5倍の間で変動する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,CustomModelData:20011,AttributeModifiers:[{}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

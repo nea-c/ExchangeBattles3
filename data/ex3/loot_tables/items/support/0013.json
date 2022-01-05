@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blue_ice",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "クライオソウルシャード","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"+ ","italic": false,"color":"white"},{"text": "常時","italic": false,"color": "gold"}],
+                {"text": "ウェポンに氷霊の力を宿す。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,CustomModelData:20013,AttributeModifiers:[{}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

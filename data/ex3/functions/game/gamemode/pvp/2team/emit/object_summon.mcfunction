@@ -1,0 +1,2 @@
+#イーミット　オブジェクト召喚
+summon armor_stand ~ ~ ~ {NoGravity:1b,Small:1b,Marker:1b,Invisible:1b,Tags:["emit_object","no_entity"],Passengers:[{id:"minecraft:shulker",Silent:1b,Glowing:1b,NoAI:1b,Health:1000000f,AttachFace:0b,Color:8b,Tags:["emit_object","no_entity"],Attributes:[{Name:"generic.max_health",Base:1000000}]}]}

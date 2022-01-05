@@ -1,0 +1,30 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:clock"
+        },
+        "title": {
+            "text": "クラフターは眠らない"
+        },
+        "description": {
+            "text": "朝、昼、夕、夜の時刻で勝利する"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "ex3:achievements/win",
+    "criteria": {
+        "morning": {"trigger": "minecraft:impossible"},
+        "noon": {"trigger": "minecraft:impossible"},
+        "evening": {"trigger": "minecraft:impossible"},
+        "midnight": {"trigger": "minecraft:impossible"}
+    },
+    "requirements": [
+        ["morning"],
+        ["noon"],
+        ["evening"],
+        ["midnight"]
+    ]
+}

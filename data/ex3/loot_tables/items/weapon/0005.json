@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crossbow",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "クロスボウ","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                {"text": "矢を追加で1本消費して、","italic": false,"color": "white"},
+                {"text": "射出速度上昇と貫通の効果を付与する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:61,Unbreakable:1b,CustomModelData:10005,ChargedProjectiles:[{id:\"minecraft:arrow\",Count:1b}],Charged:1b}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

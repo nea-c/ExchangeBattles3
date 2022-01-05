@@ -1,0 +1,25 @@
+#個別制限時間設定
+execute positioned 0 102 12 positioned 8 ~1 ~ run fill ~ ~2 ~ ~-16 ~-2 ~ minecraft:air
+execute positioned 0 102 12 positioned 8 ~1 ~ run fill ~ ~2 ~1 ~-16 ~-2 ~1 minecraft:gray_concrete
+fill ~-2 ~ ~1 ~3 ~ ~1 minecraft:dark_oak_log[axis=z]
+setblock ~ ~ ~1 minecraft:gold_block
+
+execute unless score #playsound_invalid value matches 1 run playsound minecraft:ui.loom.select_pattern master @a ~ ~ ~ 1 2
+
+execute if score #setting_gamemode_minute_dummy value matches ..0 run scoreboard players set #setting_gamemode_minute_dummy value 1
+execute unless score #setting_gamemode_minute_dummy value matches 0.. run scoreboard players operation #setting_gamemode_minute_dummy value = #gamemode_pvp_2team_emit_time value
+
+setblock ~3 ~ ~1 warped_stem[axis=z]
+setblock ~3 ~ ~ minecraft:birch_wall_sign{Text1:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"scoreboard players reset #setting_gamemode_minute_dummy"}}',Text2:'{"text":"戻る","bold":true,"color":"black","clickEvent":{"action":"run_command","value":""}}',Text3:'{"text":"右クリック","color":"black","clickEvent":{"action":"run_command","value":""}}',Text4:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"execute positioned ~-1 ~ ~ run function ex3:lobby/menu/parts/gamemode/pvp/2team/emit/open"}}'}
+
+setblock ~2 ~ ~ minecraft:birch_wall_sign{Text1:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"scoreboard players remove #setting_gamemode_minute_dummy value 10"}}',Text2:'{"text":"-10","bold":true,"color":"black","clickEvent":{"action":"run_command","value":"scoreboard players set #playsound_invalid value 1"}}',Text3:'{"text":"右クリック","color":"black","clickEvent":{"action":"run_command","value":"playsound minecraft:block.lever.click master @a"}}',Text4:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"execute positioned ~-2 ~ ~ run function ex3:lobby/menu/parts/gamemode/pvp/2team/emit/time_limit/setting"}}'}
+setblock ~1 ~ ~ minecraft:birch_wall_sign{Text1:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"scoreboard players remove #setting_gamemode_minute_dummy value 1"}}',Text2:'{"text":"-1","bold":true,"color":"black","clickEvent":{"action":"run_command","value":"scoreboard players set #playsound_invalid value 1"}}',Text3:'{"text":"右クリック","color":"black","clickEvent":{"action":"run_command","value":"playsound minecraft:block.lever.click master @a"}}',Text4:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"execute positioned ~-1 ~ ~ run function ex3:lobby/menu/parts/gamemode/pvp/2team/emit/time_limit/setting"}}'}
+
+setblock ~-1 ~ ~ minecraft:birch_wall_sign{Text1:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"scoreboard players add #setting_gamemode_minute_dummy value 1"}}',Text2:'{"text":"+1","bold":true,"color":"black","clickEvent":{"action":"run_command","value":"scoreboard players set #playsound_invalid value 1"}}',Text3:'{"text":"右クリック","color":"black","clickEvent":{"action":"run_command","value":"playsound minecraft:block.lever.click master @a"}}',Text4:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"execute positioned ~1 ~ ~ run function ex3:lobby/menu/parts/gamemode/pvp/2team/emit/time_limit/setting"}}'}
+setblock ~-2 ~ ~ minecraft:birch_wall_sign{Text1:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"scoreboard players add #setting_gamemode_minute_dummy value 10"}}',Text2:'{"text":"+10","bold":true,"color":"black","clickEvent":{"action":"run_command","value":"scoreboard players set #playsound_invalid value 1"}}',Text3:'{"text":"右クリック","color":"black","clickEvent":{"action":"run_command","value":"playsound minecraft:block.lever.click master @a"}}',Text4:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"execute positioned ~2 ~ ~ run function ex3:lobby/menu/parts/gamemode/pvp/2team/emit/time_limit/setting"}}'}
+
+setblock ~ ~ ~ minecraft:birch_wall_sign{Text1:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":""}}',Text2:'["",{"score":{"name":"#setting_gamemode_minute_dummy","objective":"value"},"bold":true,"color":"black"},{"text":"分","bold":true,"color":"black"}]',Text3:'{"text":"右クリック","color":"black","clickEvent":{"action":"run_command","value":""}}',Text4:'{"text":"------------------","color":"black","clickEvent":{"action":"run_command","value":"function ex3:lobby/menu/parts/gamemode/pvp/2team/emit/time_limit/decision"}}'}
+
+
+
+execute if score #playsound_invalid value matches 1 run scoreboard players reset #playsound_invalid

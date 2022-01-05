@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:azure_bluet",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "精霊の花","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"+ ","italic": false,"color":"white"},{"text": "常時","italic": false,"color": "gold"}],
+                {"text": "最大体力を8増加する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:61,CustomModelData:20004}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

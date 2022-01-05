@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "shot_crossbow": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:crossbow"
+          ]
+        }
+      }
+    }
+  }
+}

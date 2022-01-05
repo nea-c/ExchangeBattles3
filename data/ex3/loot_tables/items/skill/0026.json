@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:green_dye",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "ダッシュブースト","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Passive","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "5s , 7s , 12s","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "スニーク >> 解除","italic": false,"color": "yellow"}],
+                {"text": "移動速度を上昇させる。","italic": false,"color": "white"},
+                {"text": "スニーク長押しで2段階チャージでき、","italic": false,"color": "white"},
+                {"text": "チャージ量に応じて効果が上昇する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:[5s,7s,12s],CustomModelData:30026}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

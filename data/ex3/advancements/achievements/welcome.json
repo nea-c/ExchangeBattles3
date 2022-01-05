@@ -1,0 +1,20 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:lime_concrete"
+        },
+        "title": {
+            "text": "§lWelcome !"
+        },
+        "description": {
+            "text": ""
+        },
+        "announce_to_chat": false
+    },
+    "parent": "ex3:root",
+    "criteria": {
+        "auto": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

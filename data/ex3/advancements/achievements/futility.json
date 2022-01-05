@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:player_head"
+        },
+        "title": {
+            "text": "無駄への探究"
+        },
+        "description": {
+            "text": "1時間スニークをし続ける"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "ex3:achievements/cant_stop",
+    "criteria": {
+        "auto": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

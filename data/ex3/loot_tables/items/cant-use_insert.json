@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "block": "0 0 0",
+                  "nbt": "Items[0].tag.display.Name",
+                  "interpret": true
+                },
+                {"text": " "},{"text": "(使用不可)","italic": false,"color": "#ff0000"}
+              ],
+              "entity": "this"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

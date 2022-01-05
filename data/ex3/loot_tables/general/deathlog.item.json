@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                "",
+                {"text":"--------------------------------\n","italic":false,"color":"gray"},
+                {"text":"+ "},{"text": "HP\n","color": "red"},
+                {"score": {"name": "#health_int","objective": "value"}},{"text": "."},{"score": {"name": "#health_frac","objective": "value"}},
+                {"text":"\n--------------------------------\n","italic":false,"color":"gray"},
+                {"text":"+ "},{"text": "ウェポン\n","color": "yellow"},
+                {"block": "0 0 0","nbt": "Items[{Slot:1b}].tag.display.Name","interpret": true},
+                {"text":"\n--------------------------------\n","italic":false,"color":"gray"},
+                {"text":"+ "},{"text": "サポート\n","color": "yellow"},
+                {"block": "0 0 0","nbt": "Items[{Slot:2b}].tag.display.Name","interpret": true},
+                {"text":"\n--------------------------------\n","italic":false,"color":"gray"},
+                {"text":"+ "},{"text": "スキルスロット1\n","color": "yellow"},
+                {"block": "0 0 0","nbt": "Items[{Slot:3b}].tag.display.Name","interpret": true},
+                {"text":"\n--------------------------------\n","italic":false,"color":"gray"},
+                {"text":"+ "},{"text": "スキルスロット2\n","color": "yellow"},
+                {"block": "0 0 0","nbt": "Items[{Slot:4b}].tag.display.Name","interpret": true},
+                {"text":"\n--------------------------------\n","italic":false,"color":"gray"},
+                {"text":"+ "},{"text": "スキルスロット3\n","color": "yellow"},
+                {"block": "0 0 0","nbt": "Items[{Slot:5b}].tag.display.Name","interpret": true},
+                {"text":"\n--------------------------------","italic":false,"color":"gray"}
+              ]
+            }
+          ],
+          "entity": "this"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:tnt",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "ボム","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Active","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "10s","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "スニーク","italic": false,"color": "yellow"}],
+                {"text": "ボムを設置する。","italic": false,"color": "white"},
+                {"text": "自動起爆までの間\"起爆装置\"を使用して、","italic": false,"color": "white"},
+                {"text": "自由なタイミングで起爆できる。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:10s,CustomModelData:30010}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

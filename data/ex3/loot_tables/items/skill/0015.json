@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "アロースプリンクラー","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Active","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "13s","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "右クリック","italic": false,"color": "yellow"}],
+                {"text": "一直線に飛行するスプリンクラーコアを放つ。","italic": false,"color": "white"},
+                {"text": "一定距離飛行/敵にヒット/ブロックに衝突","italic": false,"color": "white"},
+                {"text": "のいずれかを満たして展開するまでの間、","italic": false,"color": "white"},
+                {"text": "\"展開装置\"を使用して、","italic": false,"color": "white"},
+                {"text": "自由なタイミングで展開できる。","italic": false,"color": "white"},
+                {"text": "展開地点から矢を撒き散らす。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:13s,CustomModelData:30015}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

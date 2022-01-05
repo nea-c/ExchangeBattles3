@@ -1,0 +1,329 @@
+{
+  "criteria": {
+      "0-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag0.0\"]}"
+              }
+          }
+      },
+      "0-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag0.1\"]}"
+              }
+          }
+      },
+      "1-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag1.0\"]}"
+              }
+          }
+      },
+      "1-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag1.1\"]}"
+              }
+          }
+      },
+      "2-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag2.0\"]}"
+              }
+          }
+      },
+      "2-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag2.1\"]}"
+              }
+          }
+      },
+      "3-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag3.0\"]}"
+              }
+          }
+      },
+      "3-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag3.1\"]}"
+              }
+          }
+      },
+      "4-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag4.0\"]}"
+              }
+          }
+      },
+      "4-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag4.1\"]}"
+              }
+          }
+      },
+      "5-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag5.0\"]}"
+              }
+          }
+      },
+      "5-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag5.1\"]}"
+              }
+          }
+      },
+      "6-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag6.0\"]}"
+              }
+          }
+      },
+      "6-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag6.1\"]}"
+              }
+          }
+      },
+      "7-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag7.0\"]}"
+              }
+          }
+      },
+      "7-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag7.1\"]}"
+              }
+          }
+      },
+      "8-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag8.0\"]}"
+              }
+          }
+      },
+      "8-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag8.1\"]}"
+              }
+          }
+      },
+      "9-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag9.0\"]}"
+              }
+          }
+      },
+      "9-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag9.1\"]}"
+              }
+          }
+      },
+      "10-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag10.0\"]}"
+              }
+          }
+      },
+      "10-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag10.1\"]}"
+              }
+          }
+      },
+      "11-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag11.0\"]}"
+              }
+          }
+      },
+      "11-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag11.1\"]}"
+              }
+          }
+      },
+      "12-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag12.0\"]}"
+              }
+          }
+      },
+      "12-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag12.1\"]}"
+              }
+          }
+      },
+      "13-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag13.0\"]}"
+              }
+          }
+      },
+      "13-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag13.1\"]}"
+              }
+          }
+      },
+      "14-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag14.0\"]}"
+              }
+          }
+      },
+      "14-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag14.1\"]}"
+              }
+          }
+      },
+      "15-0": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag15.0\"]}"
+              }
+          }
+      },
+      "15-1": {
+          "trigger": "player_hurt_entity",
+          "conditions": {
+              "entity": {
+                  "nbt": "{Tags:[\"MobFindFlag15.1\"]}"
+              }
+          }
+      }
+  },
+  "requirements": [
+      [
+          "0-0",
+          "0-1"
+      ],
+      [
+          "1-0",
+          "1-1"
+      ],
+      [
+          "2-0",
+          "2-1"
+      ],
+      [
+          "3-0",
+          "3-1"
+      ],
+      [
+          "4-0",
+          "4-1"
+      ],
+      [
+          "5-0",
+          "5-1"
+      ],
+      [
+          "6-0",
+          "6-1"
+      ],
+      [
+          "7-0",
+          "7-1"
+      ],
+      [
+          "8-0",
+          "8-1"
+      ],
+      [
+          "9-0",
+          "9-1"
+      ],
+      [
+          "10-0",
+          "10-1"
+      ],
+      [
+          "11-0",
+          "11-1"
+      ],
+      [
+          "12-0",
+          "12-1"
+      ],
+      [
+          "13-0",
+          "13-1"
+      ],
+      [
+          "14-0",
+          "14-1"
+      ],
+      [
+          "15-0",
+          "15-1"
+      ]
+  ],
+  "rewards": {
+      "function": "ex3:general/attack/dealt_to_entity/"
+  }
+}

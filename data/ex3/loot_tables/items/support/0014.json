@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:activator_rail",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "軽量化アイテムベルト","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"+ ","italic": false,"color":"white"},{"text": "常時","italic": false,"color": "gold"}],
+                {"text": "メインハンドが素手の時に","italic": false,"color": "white"},
+                {"text": "移動速度+15%を得るが、","italic": false,"color": "white"},
+                {"text": "ウェポン持ち替えの際に使用制限を受ける。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,CustomModelData:20014,AttributeModifiers:[{}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

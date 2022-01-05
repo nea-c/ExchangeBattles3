@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lingering_potion",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "アトランダムアロー","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Active","italic": false,"color": "green"},{"text":" / ","color":"white"},
+                  {"text": "8s ～ 使用時間 x 1.5","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "右クリック","italic": false,"color": "yellow"}],
+                {"text": "アトランダム効果を起動する。","italic": false,"color": "white"},
+                {"text": "2度目の発動/20秒経過で効果を停止する。","italic": false,"color": "white"},
+                {"text": "効果中は放つ矢にランダムな効果を付与する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,CustomPotionColor:1381415,cooltime:8s,e-time:20s,CustomModelData:30033}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shulker_shell",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "ガードフォート","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Active","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "5s x 効果対象者数","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "スニーク","italic": false,"color": "yellow"}],
+                {"text": "周囲の味方プレイヤーに耐性を付与する。","italic": false,"color": "white"},
+                {"text": "効果対象者数に応じて効果が上昇する。","italic": false,"color": "white"},
+                {"text": "(最大80%軽減)","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:5s,CustomModelData:30021}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

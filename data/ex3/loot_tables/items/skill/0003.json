@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lodestone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "マーカー","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Passive","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "7s x 効果対象者数","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "攻撃","italic": false,"color": "yellow"}],
+                {"text": "対象を長時間発光させる。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "憑依","italic": false,"color": "yellow"}],
+                {"text": "対象とその周囲の敵を長時間発光させる。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:7s,CustomModelData:30003}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

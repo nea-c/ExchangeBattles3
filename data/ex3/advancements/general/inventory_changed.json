@@ -1,0 +1,10 @@
+{
+    "criteria": {
+      "root": {
+        "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "rewards": {
+      "function": "ex3:general/inventory_changed/check"
+    }
+  }

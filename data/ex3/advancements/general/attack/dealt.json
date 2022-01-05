@@ -1,0 +1,7 @@
+{
+  "criteria": {
+    "any_dealt": {
+      "trigger": "minecraft:player_hurt_entity"
+    }
+  }
+}

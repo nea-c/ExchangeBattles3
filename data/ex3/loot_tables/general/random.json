@@ -1,0 +1,44 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "generic.luck",
+                  "name": "random",
+                  "amount": {
+                    "min": {
+                      "type":"minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "#random"
+                      },
+                      "score": "value"
+                    },
+                    "max": {
+                      "type":"minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "#random"
+                      },
+                      "score": "value2"}
+                    },
+                  "id": "00000000-0000-0000-0000-000000000000",
+                  "operation": "addition",
+                  "slot": "head"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

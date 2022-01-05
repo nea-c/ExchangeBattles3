@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:magenta_concrete"
+        },
+        "title": {
+            "text": "§e§l§k||§r §a§lExchange§d§lBattles§f§l3 §e§l§k||"
+        },
+        "description": {
+            "text": ""
+        },
+        "background": "minecraft:textures/block/quartz_block_top.png",
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "root": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

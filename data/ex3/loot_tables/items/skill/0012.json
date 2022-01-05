@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:sea_lantern",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {"text": "カウンタースパーク","italic": false,"color": "white"}
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                [{"text": "Passive","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "5s + 成功時10s","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "スニーク","italic": false,"color": "yellow"}],
+                {"text": "0.5秒間カウンターの構えを取る。","italic": false,"color": "white"},
+                {"text": "その間にダメージを受けると、","italic": false,"color": "white"},
+                {"text": "受けたダメージを無効化し、周囲の敵に","italic": false,"color": "white"},
+                {"text": "ダメージ・視界不良・攻撃力低下を与える。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:63,cooltime:[5s,10s],CustomModelData:30012}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
