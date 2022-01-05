@@ -1,0 +1,2 @@
+# ExchangeBattles3
+ExchangeBattles3のデータパック及びリリース
