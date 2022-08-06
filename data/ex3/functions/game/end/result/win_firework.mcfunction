@@ -15,7 +15,7 @@ execute if score #firework value matches 5 run title @a title [{"text":"ロビ�
 execute if score #firework value matches 9 run function ex3:lobby/back
 execute if score #firework value matches 9 if score #game_auto_start value matches 1 run scoreboard players set #auto_start_chat_lobby value 1
 execute if score #firework value matches 9 if score #game_auto_start value matches 1 run function ex3:game/auto_start/execution
-execute if score #firework value matches 9 if score #team_auto_change value matches 2 run function ex3:game/team_random/2team
+execute if score #firework value matches 9 if score #team_auto_change value matches 2 run function ex3:game/team/random/2team
 execute if score #firework value matches 9 if score #team_auto_change value matches 2 run tellraw @a ["",{"text":"[システム]","color":"yellow"},{"text":" "},{"text":"チーム","color":"green"},{"text":"を"},{"text":"2チーム","color":"light_purple"},{"text":"に振り分けました"}]
 execute if score #firework value matches 9 run scoreboard players set #playing value 0
 execute if score #firework value matches 9 run scoreboard players reset #firework

@@ -1,6 +1,6 @@
 scoreboard players set #distance value 0
 summon marker ~ ~ ~ {Tags:["distance"]}
-tp @e[tag=distance,limit=1] ~ ~ ~ facing entity @s feet
+tp @e[tag=distance,limit=1] ~ ~ ~ ~ ~
 
 execute at @e[tag=distance,limit=1] run function ex3:general/get_distance/air-check/1
 

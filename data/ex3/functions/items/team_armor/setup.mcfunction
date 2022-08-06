@@ -8,7 +8,7 @@ execute if score #team_armor value matches 4 run tag @s add feet_true
 
 execute if entity @s[tag=body_true] run tag @s add feet_true
 
-execute if data entity @s {ActiveEffects:[{Id:14b}]} run tag @s add disable_team-armor
+execute if data entity @s {ActiveEffects:[{Id:14}]} run tag @s add disable_team-armor
 
 execute if entity @s[tag=disable_team-armor,tag=head_true] run tag @s remove head_true
 execute if entity @s[tag=disable_team-armor,tag=body_true] run tag @s remove body_true

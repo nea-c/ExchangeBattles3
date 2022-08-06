@@ -6,7 +6,12 @@ scoreboard players operation #health_frac value %= #10 value
 
 execute if score #health_int value matches ..-1 run scoreboard players set #health_int value 0
 
-title @s actionbar ["",{"text":"HP:","color":"#ee0000","bold":true,"underlined":true},{"text":""},{"score":{"name":"#health_int","objective":"value"},"color":"#ee0000","bold":true,"underlined":true},{"text":".","color":"#ee0000","bold":true,"underlined":true},{"score":{"name":"#health_frac","objective":"value"},"color":"#ee0000","bold":true,"underlined":true},{"text":"/","color":"#ee0000","bold":true,"underlined":true},{"score":{"name":"@s","objective":"max_health"},"color":"#ee0000","bold":true,"underlined":true},{"text":"                         "}]
+
+data modify storage tmp: text set value '{"translate":"HP:%s/%s","with":[{"translate":"%s.%s","with":[{"score":{"name":"#health_int","objective":"value"}},{"score":{"name":"#health_frac","objective":"value"}}]},{"score":{"name":"@s","objective":"max_health"}}]}'
+
+title @s actionbar {"translate":"%s                         ","with":[{"nbt":"text","storage": "tmp:","interpret": true,"separator": "","color":"#ff1313","bold":true,"underlined":true}]}
+
+data remove storage tmp: text
 
 execute if score #health_frac value matches 5.. run scoreboard players add #health_int value 1
 scoreboard players operation @s health_display = #health_int value

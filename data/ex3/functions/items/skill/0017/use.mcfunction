@@ -15,7 +15,7 @@ execute at @s run playsound minecraft:ui.stonecutter.take_result master @a ~ ~ ~
 execute at @s run particle minecraft:squid_ink ~ ~1 ~ 0 0.3 0 0.1 10 force
 
 
-summon minecraft:pillager ~ ~ ~ {CustomName:'{"text":""}',CustomNameVisible:1b,Tags:["skill17-stand","this"],Silent:1b}
+summon minecraft:pillager ~ ~ ~ {CustomName:'{"text":""}',CustomNameVisible:1b,Tags:["skill17-stand","this"],PersistenceRequired:1b,Silent:1b}
 
 execute if entity @s[tag=emit] run tag @e[tag=this] add emit_d
 execute if entity @s[tag=emit] run effect give @e[tag=this,limit=1] glowing 1000000 0 true

@@ -8,7 +8,7 @@ execute as @e[tag=skill2-anchor] run function ex3:items/skill/0002/hit/sus/check
 
 
 execute as @e[tag=owner] at @s run particle minecraft:dust 0 0 0.6 1 ~ ~1 ~ 0.2 0.3 0.2 0 1 force
-execute as @e[tag=owner] if entity @s[nbt={ActiveEffects:[{Id:26b}]}] run effect clear @s luck
+execute as @e[tag=owner] if entity @s[nbt={ActiveEffects:[{Id:26}]}] run effect clear @s luck
 
 execute unless score @s value matches 1.. run tag @e[tag=owner,tag=skill2-anchor] remove skill2-anchor
 

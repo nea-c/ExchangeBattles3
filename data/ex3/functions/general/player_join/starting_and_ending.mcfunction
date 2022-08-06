@@ -3,7 +3,7 @@ scoreboard players reset @s max_health
 title @s actionbar {"text":""}
 execute unless score @s game_number = #game_number value run tag @s add mismatch
 execute if score @s game_number = #game_number value run tag @s add match
-execute if entity @s[tag=mismatch] run team join wait @s
+execute if entity @s[tag=mismatch] run function ex3:game/team/wait_trigger
 execute if entity @s[tag=mismatch] run bossbar set ex3:game players @a
 execute if entity @s[tag=mismatch] run bossbar set ex3:boss players @a
 execute if entity @s[tag=mismatch] run function ex3:game/map/tp

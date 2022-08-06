@@ -11,14 +11,13 @@ execute as @e[tag=hit,type=player] run function ex3:general/shield/guard/check
 scoreboard players reset #rot
 scoreboard players reset #p-rot
 
-
-scoreboard players set #- damage_resist 60
 scoreboard players operation #- number = @s number
 
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run tag @s add magic
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players operation @s hurt_by = #- number
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players set @s damage_source 30029
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players operation @s damage_resist = #- damage_resist
+execute as @e[tag=hit] run tag @s add magic
+execute as @e[tag=hit] run scoreboard players operation @s hurt_by = #- number
+execute as @e[tag=hit] run scoreboard players set @s damage_source 30029
+execute as @e[tag=hit] run scoreboard players set @s damage_resist 60
 
+execute as @e[tag=hit] run function ex3:general/health_proc/damage/calc
 
 tag @e[tag=hit] remove hit

@@ -2,7 +2,7 @@
 
 scoreboard players set #resist value 100
 scoreboard players set #resistance value 0
-execute if entity @s[nbt={ActiveEffects:[{Id:26b}]}] store result score #resistance value2 run data get entity @s ActiveEffects[{Id:26b}].Amplifier
+execute if entity @s[nbt={ActiveEffects:[{Id:26}]}] store result score #resistance value2 run data get entity @s ActiveEffects[{Id:26}].Amplifier
 execute if score #resistance value2 matches 0.. run scoreboard players add #resistance value2 1
 execute if score #resistance value2 matches 1.. run scoreboard players operation #resistance value2 *= #10 value
 execute if score #resistance value2 matches 1.. run scoreboard players operation #resistance value = #resistance value2
@@ -27,7 +27,7 @@ execute if entity @s[tag=into_void] run scoreboard players reset #resistance
 
 execute if score #resistance value matches 100.. run scoreboard players set #resistance value 100
 #剥ぎ鋏
-execute at @s if entity @a[tag=!hurt,tag=hurt_by,distance=..7,advancements={ex3:general/attack/melee_dealt=true},scores={weapon=7},nbt={SelectedItem:{tag:{CustomModelData:10007}}},limit=1] run tag @s add weapon7-1
+execute at @s if entity @a[tag=!hurt,tag=hurt_by,distance=..7,advancements={ex3:general/attack/dealt/melee/=true},scores={weapon=7},nbt={SelectedItem:{tag:{CustomModelData:10007}}},limit=1] run tag @s add weapon7-1
 execute if entity @s[tag=weapon7-1] run scoreboard players set #boost value 6
 execute if entity @s[tag=weapon7-1] run scoreboard players operation #resistance value *= #boost value
 execute if entity @s[tag=weapon7-1] run scoreboard players operation #resistance value /= #10 value

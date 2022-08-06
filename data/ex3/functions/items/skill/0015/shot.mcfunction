@@ -14,7 +14,7 @@ execute as @a unless score @s team_number = #- team_number run particle dust 1 0
 execute as @a if score @s team_number = #- team_number run particle dust 0 1 1 0.5 ~ ~ ~ 0 0 0 0 2 force @s
 particle minecraft:splash ~ ~ ~ 0 0 0 0 5 force
 
-execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] positioned ~0.5 ~0.5 ~0.5 if entity @s[dx=0] unless score @s team_number = #- team_number run tag @s add sprink_arrow_deploy
+execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] unless score @s team_number = #- team_number run tag @s add sprink_arrow_deploy
 #execute if entity @e[tag=sprink_arrow_deploy,limit=1] as @e[tag=sprink_arrow_deploy] run say a
 execute if entity @e[tag=sprink_arrow_deploy,limit=1] run function ex3:items/skill/0015/deploy
 

@@ -7,11 +7,12 @@ execute if score @s tab matches 40.. run scoreboard players set @s tab 40
 scoreboard players operation #- damage_resist = @s tab
 scoreboard players operation #- number = @s number
 
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run tag @s add magic
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run tag @s add knockback-disabled
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players operation @s hurt_by = #- number
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players set @s damage_source 30022
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players operation @s damage_resist = #- damage_resist
+execute as @e[tag=hit] run tag @s add magic
+execute as @e[tag=hit] run tag @s add knockback-disabled
+execute as @e[tag=hit] run scoreboard players operation @s hurt_by = #- number
+execute as @e[tag=hit] run scoreboard players set @s damage_source 30022
+execute as @e[tag=hit] run scoreboard players operation @s damage_resist = #- damage_resist
 
+execute as @e[tag=hit] run function ex3:general/health_proc/damage/calc
 
 tag @e[tag=hit] remove hit

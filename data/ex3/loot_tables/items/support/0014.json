@@ -20,7 +20,7 @@
                 {"text":"--------------------------------","italic":false,"color":"gray"},
                 [{"text":"+ ","italic": false,"color":"white"},{"text": "常時","italic": false,"color": "gold"}],
                 {"text": "メインハンドが素手の時に","italic": false,"color": "white"},
-                {"text": "移動速度+15%を得るが、","italic": false,"color": "white"},
+                {"text": "移動速度+20%を得るが、","italic": false,"color": "white"},
                 {"text": "ウェポン持ち替えの際に使用制限を受ける。","italic": false,"color": "white"},
                 {"text":"--------------------------------","italic":false,"color":"gray"}
               ]

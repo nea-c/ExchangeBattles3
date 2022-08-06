@@ -21,7 +21,7 @@ particle minecraft:dust 1 1 1 1 ~ ~ ~ 0.05 0.05 0.05 0 1 force
 teleport @s ~ ~ ~ ~ ~
 
 
-execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] positioned ~0.5 ~0.5 ~0.5 if entity @s[dx=0] unless score @s team_number = #- team_number run tag @s add hit
+execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] unless score @s team_number = #- team_number run tag @s add hit
 execute if entity @e[tag=hit,limit=1] run tag @s add end--
 execute if entity @e[tag=hit,type=player,limit=1] as @a[scores={max_health=0..}] if score @s number = #- number at @s run playsound entity.arrow.hit_player master @s ~ ~ ~ 0.6 0.5
 execute if entity @e[tag=hit,limit=1] run function ex3:items/skill/0016/hit

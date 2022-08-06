@@ -18,7 +18,7 @@ execute if entity @s[tag=no3] if score @s value matches 70 run tag @s add go
 
 execute if entity @s[tag=go] as @e[scores={max_health=0..},nbt=!{Invulnerable:1b}] unless score @s team_number = #- team_number run tag @s add skill16-target-c
 execute if entity @s[tag=go] as @a[tag=skill16-target-c,gamemode=spectator] run tag @s remove skill16-target-c
-execute if entity @s[tag=go] as @e[tag=skill16-target-c,nbt={Effects:[{Id:14b}]}] run tag @s remove skill16-target-c
+execute if entity @s[tag=go] as @e[tag=skill16-target-c,nbt={Effects:[{Id:14}]}] run tag @s remove skill16-target-c
 execute if entity @s[tag=go] facing entity @e[scores={max_health=0..},tag=skill16-target-c,sort=nearest,limit=1] eyes run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[tag=go] if entity @e[tag=skill16-target-c,limit=1] as @e[tag=skill16-target-c] run tag @s remove skill16-target-c
 

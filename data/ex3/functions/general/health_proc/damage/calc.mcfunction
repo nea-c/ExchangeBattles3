@@ -14,9 +14,9 @@ execute if entity @a[tag=hurt_by,limit=1] run scoreboard players operation @s la
 execute if score @s hurt_by matches ..-1 run scoreboard players operation @s last_hurt_by = @s hurt_by
 execute if score @s hurt_by matches ..-1 run scoreboard players set @s keep_hurt_by 1
 
-execute if entity @a[tag=!hurt_player,advancements={ex3:general/attack/melee_dealt=true,ex3:general/attack/trans=true},limit=1] run tag @a[advancements={ex3:general/attack/melee_dealt=true,ex3:general/attack/trans=true},limit=1] add melee_dealt
+execute if entity @a[tag=!hurt_player,advancements={ex3:general/attack/dealt/melee/trans=true},limit=1] run tag @a[advancements={ex3:general/attack/dealt/melee/trans=true},limit=1] add melee_dealt
 
-execute at @s if entity @a[tag=!hurt,tag=hurt_by,distance=..7,advancements={ex3:general/attack/melee_dealt=true},limit=1] run tag @s add melee_taken
+execute at @s if entity @a[tag=!hurt,tag=hurt_by,distance=..7,advancements={ex3:general/attack/dealt/melee/=true},limit=1] run tag @s add melee_taken
 
 function ex3:general/health_proc/damage/boost_by_enemy
 
@@ -29,7 +29,7 @@ execute if entity @s[tag=shield-guard] run scoreboard players set @s damage_resi
 execute if entity @s[tag=shield-guard,tag=magic] run tag @s remove magic
 
 #クライオデバフ
-execute at @s as @a[tag=!hurt,tag=hurt_by,distance=..7,advancements={ex3:general/attack/melee_dealt=true},scores={support=13},sort=nearest,limit=1] unless score @s weapon matches 4..5 run tag @e[tag=hurt,tag=!support13-1,limit=1] add support13-1
+execute at @s as @a[tag=!hurt,tag=hurt_by,distance=..7,advancements={ex3:general/attack/dealt/melee/with_weapon=true},scores={support=13},sort=nearest,limit=1] unless score @s weapon matches 4..5 run tag @e[tag=hurt,tag=!support13-1,limit=1] add support13-1
 execute if entity @s[tag=support13-1] run effect give @s slowness 1 0
 execute if entity @s[tag=support13-1] run tag @s remove support13-1
 
@@ -63,14 +63,15 @@ execute if entity @s[tag=skill35-now,tag=!into_void,scores={damage_resist=1..}] 
 execute if entity @s[tag=magic] store result score #hurt_time value run data get entity @s HurtTime 1
 #execute if entity @s[tag=magic] run tellraw @s ["",{"score":{"name":"#hurt_time","objective":"value"}}]
 execute if entity @s[tag=magic,tag=!knockback-disabled] if entity @a[tag=hurt_by,tag=!hurt,limit=1] run tag @s add flag
-execute if entity @s[tag=magic,tag=!undead,tag=!flag] if score #hurt_time value matches 0..1 run effect give @s minecraft:instant_damage 1 0 true
-execute if entity @s[tag=magic,tag=undead,tag=!flag] if score #hurt_time value matches 0..1 run effect give @s minecraft:instant_health 1 0 true
-execute if entity @s[tag=flag,tag=!undead] if score #hurt_time value matches 0..1 at @s run summon area_effect_cloud ~ ~ ~ {Duration:5,Age:4,WaitTime:1,Radius:0.5f,Particle:"minecraft:dust 0 0 0 0",Effects:[{Id:7b,Amplifier:1b,Duration:1}],Tags:["ini"]}
-execute if entity @s[tag=flag,tag=undead] if score #hurt_time value matches 0..1 at @s run summon area_effect_cloud ~ ~ ~ {Duration:5,Age:4,WaitTime:1,Radius:0.5f,Particle:"minecraft:dust 0 0 0 0",Effects:[{Id:6b,Amplifier:1b,Duration:1}],Tags:["ini"]}
+execute if entity @s[tag=magic,tag=!undead,tag=!flag] unless score @s damage_resist matches ..0 if score #hurt_time value matches 0..1 run effect give @s minecraft:instant_damage 1 0 true
+execute if entity @s[tag=magic,tag=undead,tag=!flag] unless score @s damage_resist matches ..0 if score #hurt_time value matches 0..1 run effect give @s minecraft:instant_health 1 0 true
+execute if entity @s[tag=flag,tag=!undead] unless score @s damage_resist matches ..0 if score #hurt_time value matches 0..1 at @s run summon area_effect_cloud ~ ~ ~ {Duration:5,Age:4,WaitTime:1,Radius:0.5f,Particle:"minecraft:dust 0 0 0 0",Effects:[{Id:7,Amplifier:1b,Duration:1}],Tags:["ini"]}
+execute if entity @s[tag=flag,tag=undead] unless score @s damage_resist matches ..0 if score #hurt_time value matches 0..1 at @s run summon area_effect_cloud ~ ~ ~ {Duration:5,Age:4,WaitTime:1,Radius:0.5f,Particle:"minecraft:dust 0 0 0 0",Effects:[{Id:6,Amplifier:1b,Duration:1}],Tags:["ini"]}
 execute if entity @s[tag=flag] run data modify entity @e[tag=ini,limit=1] Owner set from entity @a[tag=hurt_by,limit=1] UUID
 execute if entity @s[tag=flag] run tag @e[tag=ini] remove ini
 execute if entity @s[tag=flag] run tag @s remove flag
 
+execute if entity @s[tag=magic] run tag @s add hurt_time_resist
 
 execute if entity @s[type=!player,tag=magic] if score #hurt_time value matches 0..1 run tag @s add magic_protect
 execute if entity @s[type=player,tag=magic,gamemode=!creative,gamemode=!spectator] if score #hurt_time value matches 0..1 run tag @s add magic_protect
@@ -96,7 +97,7 @@ scoreboard players reset #boost
 #トータルダメとか
 execute if score #playing value matches 3 if entity @s[type=player] unless score @s[tag=hurt] team_number = @a[tag=!hurt,tag=hurt_by,limit=1] team_number run scoreboard players operation @a[tag=!hurt,tag=hurt_by,limit=1] total_dealt += @s damage_resist
 execute if entity @s[tag=into_void] run tag @s add HDCTT-specific-tag
-execute if score #playing value matches 3 if entity @s[tag=!HDCTT-specific-tag,advancements={ex3:general/attack/taken_by_fall=false}] unless score @s[tag=hurt] team_number = @a[tag=!hurt,tag=hurt_by,limit=1] team_number run scoreboard players operation @s total_taken += @s damage_resist
+execute if score #playing value matches 3 if entity @s[tag=!HDCTT-specific-tag,advancements={ex3:general/attack/taken/by_fall=false}] unless score @s[tag=hurt] team_number = @a[tag=!hurt,tag=hurt_by,limit=1] team_number run scoreboard players operation @s total_taken += @s damage_resist
 execute if entity @s[tag=HDCTT-specific-tag] run tag @s remove HDCTT-specific-tag
 
 #サンドバッグの処理

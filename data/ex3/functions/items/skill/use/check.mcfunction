@@ -18,13 +18,13 @@ tag @s add skill2_me-
 execute as @e[tag=skill2-meltshock] run function ex3:items/skill/0002/check
 tag @s remove skill2_me-
 
-execute if entity @s[advancements={ex3:general/attack/melee_dealt=true}] run function ex3:items/skill/use/melee
+execute if entity @s[advancements={ex3:general/attack/dealt/melee/=true}] run function ex3:items/skill/use/melee
 execute if entity @s[predicate=ex3:general/sneak] run function ex3:items/skill/use/sneak
 execute if entity @s[scores={jump=1..}] run function ex3:items/skill/use/jump
 execute if entity @s[scores={drop=1..},tag=!skill_no_drop] run function ex3:items/skill/use/drop
 execute if entity @s[scores={use.fungus_stick=1..}] run function ex3:items/skill/use/fungus_stick
 execute if entity @s[scores={use.carrot_stick=1..}] run function ex3:items/skill/use/carrot_stick
-execute if entity @s[nbt={ActiveEffects:[{Id:15b}]},scores={health=1..},tag=!not-blind-now] run function ex3:items/skill/use/blind
+execute if entity @s[nbt={ActiveEffects:[{Id:15}]},scores={health=1..},tag=!not-blind-now] run function ex3:items/skill/use/blind
 execute if entity @s[scores={use.snowball=1..}] run function ex3:items/skill/use/snowball
 execute if entity @s[scores={use.splash_potion=1..}] run function ex3:items/skill/use/potion
 execute if entity @s[scores={use.lingering_potion=1..}] run function ex3:items/skill/use/potion

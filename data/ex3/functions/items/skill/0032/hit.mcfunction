@@ -17,11 +17,12 @@ execute if score @s logout matches 80.. run scoreboard players set @s logout 80
 
 scoreboard players operation #- damage_resist = @s logout
 
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run tag @s add magic
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players operation @s hurt_by = #- number
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players set @s damage_source 30032
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players operation @s damage_resist = #- damage_resist
+execute as @e[tag=hit] run tag @s add magic
+execute as @e[tag=hit] run scoreboard players operation @s hurt_by = #- number
+execute as @e[tag=hit] run scoreboard players set @s damage_source 30032
+execute as @e[tag=hit] run scoreboard players operation @s damage_resist = #- damage_resist
 
+execute as @e[tag=hit] run function ex3:general/health_proc/damage/calc
 
 tag @e[tag=hit] add hit-end
 tag @e[tag=hit] remove hit

@@ -53,7 +53,7 @@ effect give @a minecraft:instant_health 1 4 true
 
 execute if entity @a[team=wait,limit=1] run team join random @a[team=wait]
 execute if entity @a[team=wait,limit=1] unless score #2team_random_toggle value matches 10.. run scoreboard players add #2team_random_toggle value 10
-execute if entity @a[team=wait,limit=1] run function ex3:game/team_random/2team
+execute if entity @a[team=wait,limit=1] run function ex3:game/team/random/2team
 
 #体力修正
 execute as @a run function ex3:general/health_proc/max-set

@@ -181,7 +181,8 @@ scoreboard objectives setdisplay sidebar
 #バニラデータパックを無効化
 datapack disable "vanilla"
 
-
+#最大コマンド実行数をint最大に変更
+gamerule maxCommandChainLength 2147483647
 
 #チーム作成
 

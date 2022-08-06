@@ -25,6 +25,7 @@ execute if score #weapon6_P value matches 1.. run tag @s add magic
 execute if score #weapon6_P value matches 1.. run scoreboard players operation @s hurt_by = @s number
 execute if score #weapon6_P value matches 1.. run scoreboard players operation @s damage_resist += #weapon6_P value
 execute if score #weapon6_P value matches 1.. run scoreboard players set @s damage_source 10006
+execute if score #weapon6_P value matches 1.. run function ex3:general/health_proc/damage/calc
 
 scoreboard players reset #weapon6_P
 

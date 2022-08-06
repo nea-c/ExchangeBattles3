@@ -20,8 +20,8 @@ execute at @s positioned ~ ~-0.01 ~ if entity @e[tag=wall_entity,limit=1,dx=0] r
 execute at @s positioned ~0.01 ~ ~ if entity @e[tag=wall_entity,limit=1,dx=0] run tag @s add deploy
 execute at @s positioned ~-0.01 ~ ~ if entity @e[tag=wall_entity,limit=1,dx=0] run tag @s add deploy
 
-execute at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] positioned ~0.5 ~0.5 ~0.5 if entity @s[dx=0] unless score @s team_number = #- team_number run tag @e[tag=this,tag=!deploy,limit=1] add deploy
-#execute at @s as @e[scores={max_health=0..},distance=..1] unless score @s team_number = #- team_number run tag @e[tag=this,tag=!deploy,limit=1] add deploy
+execute at @s positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] unless score @s team_number = #- team_number run tag @e[tag=this,tag=!deploy,limit=1] add deploy
+execute at @s as @e[scores={max_health=0..},distance=..1] unless score @s team_number = #- team_number run tag @e[tag=this,tag=!deploy,limit=1] add deploy
 
 execute at @s run particle dust_color_transition 1 1 1 2 0.157 0.067 0.373 ~ ~ ~ 0 0 0 0 1 force @a
 #execute at @s run particle dust 0.533 0.216 0.616 1 ~ ~ ~ 0 0 0 0 1 force @a

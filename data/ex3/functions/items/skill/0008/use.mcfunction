@@ -15,7 +15,7 @@ playsound minecraft:block.piston.extend master @a ~ ~ ~ 1
 playsound minecraft:item.trident.throw master @a ~ ~ ~ 1 1.4
 particle minecraft:cloud ~ ~1 ~ 0 0 0 0.5 10 force
 
-summon area_effect_cloud ~ ~1 ~ {Radius:0f,WaitTime:1,Duration:5,Age:4,Effects:[{Id:25b,Amplifier:127,Duration:5}]}
+summon area_effect_cloud ~ ~1 ~ {Radius:0f,WaitTime:1,Duration:5,Age:4,Effects:[{Id:25,Amplifier:127,Duration:5}]}
 
 
 

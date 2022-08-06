@@ -10,7 +10,7 @@ scoreboard players operation #- team_number = @s team_number
 particle minecraft:damage_indicator ~ ~ ~ 0.2 0.4 0.2 1 3 force
 playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 0.06 1.4
 
-execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] positioned ~0.5 ~0.5 ~0.5 if entity @s[dx=0] unless score @s team_number = #- team_number run tag @s add hit
+execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] unless score @s team_number = #- team_number run tag @s add hit
 execute as @e[distance=..2,scores={max_health=0..}] unless score @s team_number = #- team_number run tag @s add hit
 
 scoreboard players reset #-

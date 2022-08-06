@@ -10,9 +10,9 @@ execute as @e[type=!player,tag=!fixed] run kill @s
 execute as @e[scores={number=0..},type=!player,tag=fixed,tag=death-owner-end] run tag @s add end--
 
 execute as @a run scoreboard players operation @s keep_team = @s team_number
-execute if score #gamemode value matches 1101..1199 if score #team_auto_change value matches 1 run function ex3:game/team_random/2team
+execute if score #gamemode value matches 1101..1199 if score #team_auto_change value matches 1 run function ex3:game/team/random/2team
 execute if score #gamemode value matches 1201..1299 run team join ffa @a[team=!,team=!wait]
-execute if score #gamemode value matches 1301..1399 run function ex3:game/team_random/trio
+execute if score #gamemode value matches 1301..1399 run function ex3:game/team/random/trio
 execute if score #gamemode value matches 2101 run team join pve @a[team=!,team=!wait]
 scoreboard players reset #alarm
 scoreboard players reset #menu_cant_enter

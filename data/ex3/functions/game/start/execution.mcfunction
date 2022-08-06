@@ -79,6 +79,7 @@ title @a times 0 300 20
 title @a title [{"text":"Loading","color":"white"}]
 function ex3:general/health_proc/full-recovery
 
+scoreboard players set #ellipse value 0
 function ex3:game/start/ellipses
 function ex3:game/map/load
 tp @a 0 100 0

@@ -1,6 +1,6 @@
 attribute @s minecraft:generic.attack_damage modifier remove 22653b89-116e-49dc-9b6b-9971489b5be5
 attribute @s minecraft:generic.attack_damage modifier remove 0-0-0-0-1
-execute store result score #g-ad value run data get entity @s ActiveEffects[{Id:18b}].Amplifier
+execute store result score #g-ad value run data get entity @s ActiveEffects[{Id:18}].Amplifier
 scoreboard players add #g-ad value 1
 
 execute if score #g-ad value matches 1 run attribute @s minecraft:generic.attack_damage modifier add 0-0-0-0-1 "weakness" -0.102 multiply

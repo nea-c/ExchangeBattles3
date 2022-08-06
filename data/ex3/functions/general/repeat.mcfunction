@@ -65,7 +65,7 @@ execute as @a run attribute @s generic.movement_speed modifier remove 0-0-0-2-00
 execute if entity @a[scores={support=9},gamemode=!spectator,limit=1] as @a[scores={support=9},gamemode=!spectator] run function ex3:items/support/0009/speed
 
 #センサー
-execute if entity @a[nbt={ActiveEffects:[{Id:16b}]},tag=support12-nv,limit=1] as @a[nbt={ActiveEffects:[{Id:16b}]},tag=support12-nv] unless entity @s[scores={support=12,max_health=0..},gamemode=!spectator] run effect clear @s night_vision
+execute if entity @a[nbt={ActiveEffects:[{Id:16}]},tag=support12-nv,limit=1] as @a[nbt={ActiveEffects:[{Id:16}]},tag=support12-nv] unless entity @s[scores={support=12,max_health=0..},gamemode=!spectator] run effect clear @s night_vision
 execute if entity @a[tag=support12-nv,limit=1] as @a[tag=support12-nv] run tag @s remove support12-nv
 execute if entity @a[scores={support=12,max_health=0..},limit=1] as @a[scores={support=12,max_health=0..}] run effect give @s night_vision 15 0 true
 execute if entity @a[scores={support=12,max_health=0..},limit=1] as @a[scores={support=12,max_health=0..}] run tag @s add support12-nv
@@ -106,7 +106,8 @@ execute if entity @e[scores={keep_hurt_shield=1..},limit=1] as @e[scores={keep_h
 execute if entity @e[scores={keep_hurt_shield=0},limit=1] as @e[scores={keep_hurt_shield=0}] run scoreboard players reset @s hurt_time_shield
 execute if entity @e[scores={keep_hurt_shield=0},limit=1] as @e[scores={keep_hurt_shield=0}] run scoreboard players reset @s keep_hurt_shield
 execute if entity @e[scores={hurt_time_resist=1..},nbt={HurtTime:1s},limit=1] as @e[scores={hurt_time_resist=1..},nbt={HurtTime:1s}] run scoreboard players reset @s hurt_time_resist
-execute if entity @e[scores={hurt_time_resist=1..},nbt={HurtTime:0s},limit=1] as @e[scores={hurt_time_resist=1..},nbt={HurtTime:0s}] run scoreboard players reset @s hurt_time_resist
+execute if entity @e[scores={hurt_time_resist=1..},nbt={HurtTime:0s},tag=!hurt_time_resist,limit=1] as @e[scores={hurt_time_resist=1..},nbt={HurtTime:0s},tag=!hurt_time_resist] run scoreboard players reset @s hurt_time_resist
+execute if entity @e[tag=hurt_time_resist,limit=1] as @e[tag=hurt_time_resist] run tag @s remove hurt_time_resist
 execute if entity @e[scores={damage_resist=1..},limit=1] as @e[scores={damage_resist=1..}] run function ex3:general/health_proc/damage/calc
 
 #盾いろいろ
@@ -197,13 +198,13 @@ execute if entity @a[scores={use.fungus_stick=1..},limit=1] as @a[scores={use.fu
 
 
 
-execute if entity @a[advancements={ex3:general/attack/dealt=true},limit=1] as @a[advancements={ex3:general/attack/dealt=true}] run advancement revoke @s only ex3:general/attack/dealt
-#execute if entity @a[advancements={ex3:general/attack/dealt_to_player=true},limit=1] as @a[advancements={ex3:general/attack/dealt_to_player=true}] run advancement revoke @s only ex3:general/attack/dealt_to_player
-execute if entity @a[advancements={ex3:general/attack/melee_dealt=true},limit=1] as @a[advancements={ex3:general/attack/melee_dealt=true}] run advancement revoke @s only ex3:general/attack/melee_dealt
-execute if entity @a[advancements={ex3:general/attack/melee_dealt_to_player=true},limit=1] as @a[advancements={ex3:general/attack/melee_dealt_to_player=true}] run advancement revoke @s only ex3:general/attack/melee_dealt_to_player
-execute if entity @a[advancements={ex3:general/attack/melee_taken_by_player=true},limit=1] as @a[advancements={ex3:general/attack/melee_taken_by_player=true}] run advancement revoke @s only ex3:general/attack/melee_taken_by_player
-execute if entity @a[advancements={ex3:general/attack/taken_by_fall=true},limit=1] as @a[advancements={ex3:general/attack/taken_by_fall=true}] run advancement revoke @s only ex3:general/attack/taken_by_fall
-execute if entity @a[advancements={ex3:general/attack/trans=true},limit=1] as @a[advancements={ex3:general/attack/trans=true}] run advancement revoke @s only ex3:general/attack/trans
+execute if entity @a[advancements={ex3:general/attack/dealt/=true},limit=1] as @a[advancements={ex3:general/attack/dealt/=true}] run advancement revoke @s only ex3:general/attack/dealt/
+execute if entity @a[advancements={ex3:general/attack/dealt/melee/=true},limit=1] as @a[advancements={ex3:general/attack/dealt/melee/=true}] run advancement revoke @s only ex3:general/attack/dealt/melee/
+execute if entity @a[advancements={ex3:general/attack/dealt/melee/to_player=true},limit=1] as @a[advancements={ex3:general/attack/dealt/melee/to_player=true}] run advancement revoke @s only ex3:general/attack/dealt/melee/to_player
+execute if entity @a[advancements={ex3:general/attack/dealt/melee/with_weapon=true},limit=1] as @a[advancements={ex3:general/attack/dealt/melee/with_weapon=true}] run advancement revoke @s only ex3:general/attack/dealt/melee/with_weapon
+execute if entity @a[advancements={ex3:general/attack/taken/melee/by_player=true},limit=1] as @a[advancements={ex3:general/attack/taken/melee/by_player=true}] run advancement revoke @s only ex3:general/attack/taken/melee/by_player
+execute if entity @a[advancements={ex3:general/attack/taken/by_fall=true},limit=1] as @a[advancements={ex3:general/attack/taken/by_fall=true}] run advancement revoke @s only ex3:general/attack/taken/by_fall
+execute if entity @a[advancements={ex3:general/attack/dealt/melee/trans=true},limit=1] as @a[advancements={ex3:general/attack/dealt/melee/trans=true}] run advancement revoke @s only ex3:general/attack/dealt/melee/trans
 
 execute if entity @a[advancements={ex3:general/attack/source/weapon/0004=true},limit=1] as @a[advancements={ex3:general/attack/source/weapon/0004=true}] run advancement revoke @s only ex3:general/attack/source/weapon/0004
 execute if entity @a[advancements={ex3:general/attack/source/weapon/0005=true},limit=1] as @a[advancements={ex3:general/attack/source/weapon/0005=true}] run advancement revoke @s only ex3:general/attack/source/weapon/0005

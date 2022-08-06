@@ -9,7 +9,7 @@ execute if score #team_random-all_player value matches 1 run tellraw @a ["",{"te
 execute if score #team_random-all_player value matches 1 run team join random @a
 execute if score #team_random-all_player value matches 1 run scoreboard players reset #team_random-all_player
 
-function ex3:game/team_random/2team
+function ex3:game/team/random/2team
 
 scoreboard players set #playsound_invalid value 1
 execute positioned 8 ~1 ~ run function ex3:lobby/menu/parts/team/open

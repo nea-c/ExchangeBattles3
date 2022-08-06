@@ -1,5 +1,5 @@
 #リスポーン処理
-
+function ex3:general/health_proc/respawn/tp
 tp @s @s
 gamemode adventure @s
 title @s times 0 20 40

@@ -11,10 +11,6 @@ execute if score #skill34 value matches 141.. run scoreboard players set #skill3
 
 scoreboard players operation #- damage_resist = #skill34 value
 
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run tag @s add magic
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players operation @s hurt_by = @e[tag=now,limit=1,sort=nearest] number
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players set @s damage_source 30034
-execute as @e[tag=hit] unless score @s damage_resist >= #- damage_resist run scoreboard players operation @s damage_resist = #- damage_resist
 
 
 execute if entity @s[type=player] at @s anchored eyes positioned ^ ^ ^ run summon marker ~ ~ ~ {Tags:["this"]}
@@ -33,12 +29,19 @@ execute if score #skill34 value matches 1.. if entity @s[type=!player] run data 
 summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["0034D"],Duration:1}
 summon minecraft:area_effect_cloud ~ ~-20 ~ {Tags:["0034D"],Duration:1}
 
-execute if score #skill34 value matches 1.. if entity @s[tag=!shield-guard] as @s at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @s facing entity @e[tag=0034D,limit=1,sort=nearest] feet rotated ~ 0 run summon minecraft:slime ^ ^ ^0.2 {Size:0,NoAI:1b,DeathTime:16s,Silent:1b,Tags:["kill1tick","no_entity"],ActiveEffects:[{Id:14b,Duration:2147483647,ShowParticles:0b}]}
-execute if score #skill34 value matches 1.. if entity @s[tag=!shield-guard] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Particle:"dust 0 0 0 0",Radius:0f,WaitTime:1,Duration:5,Age:4,Effects:[{Id:25b,Amplifier:10b,Duration:4,ShowIcon:0b,ShowParticles:0b}]}
+execute if score #skill34 value matches 1.. if entity @s[tag=!shield-guard] as @s at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @s facing entity @e[tag=0034D,limit=1,sort=nearest] feet rotated ~ 0 run summon minecraft:slime ^ ^ ^0.2 {Size:0,NoAI:1b,DeathTime:16s,Silent:1b,Tags:["kill1tick","no_entity"],ActiveEffects:[{Id:14,Duration:2147483647,ShowParticles:0b}]}
+execute if score #skill34 value matches 1.. if entity @s[tag=!shield-guard] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Particle:"dust 0 0 0 0",Radius:0f,WaitTime:1,Duration:5,Age:4,Effects:[{Id:25,Amplifier:10b,Duration:4,ShowIcon:0b,ShowParticles:0b}]}
 
-execute if score #skill34 value matches 1.. if entity @s[tag=shield-guard] as @s at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @s facing entity @e[tag=0034D,limit=1,sort=nearest] feet rotated ~ 0 run summon minecraft:slime ^ ^ ^0.2 {Size:0,NoAI:1b,DeathTime:16s,Silent:1b,Tags:["kill1tick","no_entity"],ActiveEffects:[{Id:14b,Duration:2147483647,ShowParticles:0b}]}
-execute if score #skill34 value matches 1.. if entity @s[tag=shield-guard] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Particle:"dust 0 0 0 0",Radius:0f,WaitTime:1,Duration:5,Age:4,Effects:[{Id:25b,Amplifier:5b,Duration:4,ShowIcon:0b,ShowParticles:0b}]}
+execute if score #skill34 value matches 1.. if entity @s[tag=shield-guard] as @s at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @e[tag=0034D,limit=2] at @s facing entity @e[tag=0034D,limit=1,sort=nearest] feet rotated ~ 0 run summon minecraft:slime ^ ^ ^0.2 {Size:0,NoAI:1b,DeathTime:16s,Silent:1b,Tags:["kill1tick","no_entity"],ActiveEffects:[{Id:14,Duration:2147483647,ShowParticles:0b}]}
+execute if score #skill34 value matches 1.. if entity @s[tag=shield-guard] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Particle:"dust 0 0 0 0",Radius:0f,WaitTime:1,Duration:5,Age:4,Effects:[{Id:25,Amplifier:5b,Duration:4,ShowIcon:0b,ShowParticles:0b}]}
 
+
+execute if score #skill34 value matches 1.. as @e[tag=hit] run tag @s add magic
+execute if score #skill34 value matches 1.. as @e[tag=hit] run scoreboard players operation @s hurt_by = @e[tag=now,limit=1,sort=nearest] number
+execute if score #skill34 value matches 1.. as @e[tag=hit] run scoreboard players set @s damage_source 30034
+execute if score #skill34 value matches 1.. as @e[tag=hit] run scoreboard players operation @s damage_resist = #- damage_resist
+
+execute if score #skill34 value matches 1.. as @e[tag=hit] run function ex3:general/health_proc/damage/calc
 
 #tag @s add knockback-disabled
 tag @s remove hit

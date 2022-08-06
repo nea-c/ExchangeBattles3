@@ -1,4 +1,4 @@
-#試合での勝者を決める処理モジュールなので記述なし
+#試合での勝者を決める処理
 execute if score #gamemode value matches 1201 if score #emerald value matches 1 as @a if score @s number = #battleroyal_win value run tag @s add win
 execute if score #gamemode value matches 1201 if score #emerald value matches 1 as @a unless score @s number = #battleroyal_win value run tag @s add lose
 execute if score #gamemode value matches 1201 unless score #emerald value matches 1 run scoreboard players set #draw value 1
@@ -21,7 +21,7 @@ execute if entity @a[team=wait,limit=1] as @a[team=wait] run tag @s add not_team
 execute if entity @a[team=,limit=1] as @a[team=] run tag @s add not_team
 execute if entity @a[team=,limit=1] as @a[team=] run tag @s add spectator
 
-execute if score #emerald_win value matches 1 run title @a subtitle [{"text":"Winner: ","color":"white"},{"text":" Emerald Team","color":"green"}]
+execute if score #emerald_win value matches 1 run title @a subtitle [{"text":"Winner: ","color":"white"},{"text":"Emerald Team","color":"green"}]
 execute if score #purpur_win value matches 1 run title @a subtitle [{"text":"Winner: ","color":"white"},{"text":"Purpur Team","color":"light_purple"}]
 execute if score #battleroyal_win value matches 1.. run title @a subtitle [{"text":"Winner: ","color":"white"},{"selector":"@a[tag=win]","color":"yellow"}]
 execute if entity @a[tag=!win,tag=!lose,limit=1] run title @a[tag=!win,tag=!lose] title [{"text":""}]
@@ -40,7 +40,10 @@ scoreboard objectives add total_point dummy
 execute as @a[team=!,team=!wait] run function ex3:game/end/result/point
 
 execute as @a run function ex3:game/end/result/achivements/main
-function ex3:game/end/result/achivements/mvp
+execute if score #gamemode value matches 1101..1199 run function ex3:game/end/result/achivements/mvp
+execute if score #gamemode value matches 2101..2199 run function ex3:game/end/result/achivements/mvp
+
+execute if score #gamemode value matches 1101..1199 run tellraw @a [{"text":"-","color":"gray"},{"text":" Score ","color":"yellow"},{"text":"[ ","color":"gray"},{"score":{"name": "#emerald","objective": "value"},"color":"green"},{"text":" : ","color":"white"},{"score":{"name": "#purpur","objective": "value"},"color":"light_purple"},{"text":" ] -","color":"gray"}]
 
 tellraw @a [{"text":"-","color":"gray"},{"text":" Ranking ","color":"yellow"},{"text":"-","color":"gray"},{"text":" (最大5人) ","color":"dark_gray"},{"text":"--------------","color":"gray"}]
 function ex3:game/end/result/ranking/main

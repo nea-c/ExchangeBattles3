@@ -19,7 +19,7 @@ scoreboard players operation #- team_number = @s team_number
 teleport @s ~ ~ ~ ~ ~
 
 
-execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] positioned ~0.5 ~0.5 ~0.5 if entity @s[dx=0] unless score @s team_number = #- team_number run tag @s add hit
+execute positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,scores={max_health=0..}] unless score @s team_number = #- team_number run tag @s add hit
 execute if entity @e[tag=hit,limit=1] run tag @s add end--
 
 execute positioned ^ ^ ^0.5 unless block ~ ~ ~ #ex3:like_air run tag @s add hit-block

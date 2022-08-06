@@ -11,7 +11,7 @@ data remove block 0 0 0 Items[]
 function ex3:items/skill/bulk
 
 
-execute if entity @s[advancements={ex3:general/attack/melee_dealt=true}] run function ex3:items/skill/0006/chase/execution
+execute if entity @s[advancements={ex3:general/attack/dealt/melee/=true}] run function ex3:items/skill/0006/chase/execution
 execute if entity @s[predicate=ex3:general/sneak,tag=!skill6-chase,tag=!skill2-melt_now] run function ex3:items/skill/0006/resistance/execution
 execute if entity @s[scores={jump=1..},tag=!skill6-chase,tag=!skill6-resistance] run function ex3:items/skill/0006/heal/main
 

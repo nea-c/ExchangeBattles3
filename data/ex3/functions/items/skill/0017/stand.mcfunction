@@ -8,8 +8,8 @@ execute as @a if score @s team_number = #- team_number run particle dust 0 1 1 1
 #execute if block ~ ~-0.5 ~ #ex3:like_air run tp @s ~ ~-0.5 ~
 execute store result entity @s Rotation[0] float 0.00001 run scoreboard players get @s value
 execute store result entity @s Rotation[1] float 0.00001 run scoreboard players get @s value2
-execute unless data entity @s ActiveEffects[{Id:24b}] if data entity @s Glowing run data modify entity @s Glowing set value 0b
-execute if data entity @s ActiveEffects[{Id:24b}] unless data entity @s Glowing run data modify entity @s Glowing set value 1b
+execute unless data entity @s ActiveEffects[{Id:24}] if data entity @s Glowing run data modify entity @s Glowing set value 0b
+execute if data entity @s ActiveEffects[{Id:24}] unless data entity @s Glowing run data modify entity @s Glowing set value 1b
 data modify entity @s FallDistance set value 0
 
 

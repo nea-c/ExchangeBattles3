@@ -5,10 +5,13 @@ execute as @e[tag=shield-count,scores={value=10..}] if score @s number = #p-rot 
 execute store result score #p-rot value run data get entity @s Rotation[0] 100
 execute store result score #p-rot value2 run data get entity @s Rotation[1] 100
 
+scoreboard players add #p-rot value 18000
+
 scoreboard players operation #p-rot value -= #rot value
-execute if score #p-rot value matches ..-1 run scoreboard players operation #p-rot value *= #-1 value
-scoreboard players remove #p-rot value 18000
 scoreboard players operation #p-rot value2 += #rot value2
+
+
+execute if score #p-rot value matches 18001.. run scoreboard players remove #p-rot value 36000
 
 #execute if score #p-rot value matches -5000..5000 if score #p-rot value2 matches -2000..2000 run tag @s add shield-guard-ok
 execute if score #p-rot value matches -9000..9000 if score #p-rot value2 matches -4500..4500 run tag @s add shield-guard-ok
