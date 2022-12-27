@@ -36,12 +36,12 @@ execute if score #skill34 value matches 1.. if entity @s[tag=shield-guard] as @s
 execute if score #skill34 value matches 1.. if entity @s[tag=shield-guard] at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Particle:"dust 0 0 0 0",Radius:0f,WaitTime:1,Duration:5,Age:4,Effects:[{Id:25,Amplifier:5b,Duration:4,ShowIcon:0b,ShowParticles:0b}]}
 
 
-execute if score #skill34 value matches 1.. as @e[tag=hit] run tag @s add magic
-execute if score #skill34 value matches 1.. as @e[tag=hit] run scoreboard players operation @s hurt_by = @e[tag=now,limit=1,sort=nearest] number
-execute if score #skill34 value matches 1.. as @e[tag=hit] run scoreboard players set @s damage_source 30034
-execute if score #skill34 value matches 1.. as @e[tag=hit] run scoreboard players operation @s damage_resist = #- damage_resist
+execute if score #skill34 value matches 1.. run tag @s add magic
+execute if score #skill34 value matches 1.. run scoreboard players operation @s hurt_by = @e[tag=now,limit=1,sort=nearest] number
+execute if score #skill34 value matches 1.. run scoreboard players set @s damage_source 30034
+execute if score #skill34 value matches 1.. run scoreboard players operation @s damage_resist = #- damage_resist
 
-execute if score #skill34 value matches 1.. as @e[tag=hit] run function ex3:general/health_proc/damage/calc
+execute if score #skill34 value matches 1.. run function ex3:general/health_proc/damage/calc
 
 #tag @s add knockback-disabled
 tag @s remove hit

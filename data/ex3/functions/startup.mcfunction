@@ -162,6 +162,7 @@ gamerule randomTickSpeed 0
 gamerule doMobSpawning false
 gamerule doTileDrops false
 gamerule spawnRadius 0
+gamerule maxEntityCramming 0
 gamerule keepInventory true
 gamerule naturalRegeneration false
 gamerule doFireTick false
@@ -179,7 +180,7 @@ weather clear
 scoreboard objectives setdisplay sidebar
 
 #バニラデータパックを無効化
-datapack disable "vanilla"
+#datapack disable "vanilla"
 
 #最大コマンド実行数をint最大に変更
 gamerule maxCommandChainLength 2147483647

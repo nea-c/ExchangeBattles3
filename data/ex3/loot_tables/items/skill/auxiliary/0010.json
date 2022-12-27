@@ -17,9 +17,11 @@
             {
               "function": "minecraft:set_lore",
               "lore": [
-                {"text": "タイプ：アクティブ","italic": false,"color": "green"},
-                {"text": "トリガ：ライトクリック","italic": false,"color": "yellow"},
-                {"text": "自身が設置したボムを起爆する","italic": false,"color": "white"}
+                [{"text": "Active","italic": false,"color": "green"},{"text":" / ","color":"white"},{"text": "0s","italic": false,"color": "aqua"}],
+                {"text":"--------------------------------","italic":false,"color":"gray"},
+                [{"text":"> ","italic": false,"color":"white"},{"text": "右クリック","italic": false,"color": "yellow"}],
+                {"text": "自身が設置したボムを起爆する。","italic": false,"color": "white"},
+                {"text":"--------------------------------","italic":false,"color":"gray"}
               ]
             },
             {

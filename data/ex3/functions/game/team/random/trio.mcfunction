@@ -7,7 +7,7 @@ execute if score #trio_team_random_toggle value matches 1002 run team join purpu
 
 
 execute if score #trio_team_random_toggle value matches 1002.. run scoreboard players set #trio_team_random_toggle value 1000
-execute if entity @a[team=random,limit=1] run function ex3:game/team_random/trio
+execute if entity @a[team=random,limit=1] run function ex3:game/team/random/trio
 
 
 

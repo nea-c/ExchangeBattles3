@@ -21,7 +21,7 @@
                 {"text":"--------------------------------","italic":false,"color":"gray"},
                 [{"text":"> ","italic": false,"color":"white"},{"text": "スニーク","italic": false,"color": "yellow"}],
                 {"text": "0.5秒間カウンターの構えを取る。","italic": false,"color": "white"},
-                {"text": "その間にダメージを受けると、","italic": false,"color": "white"},
+                {"text": "その間に敵からダメージを受けると、","italic": false,"color": "white"},
                 {"text": "受けたダメージを無効化し、周囲の敵に","italic": false,"color": "white"},
                 {"text": "ダメージ・視界不良・攻撃力低下を与える。","italic": false,"color": "white"},
                 {"text":"--------------------------------","italic":false,"color":"gray"}

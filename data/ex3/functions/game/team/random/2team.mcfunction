@@ -10,7 +10,7 @@ team join purpur @r[team=random]
 
 execute if score #2team_random_toggle value matches 12 run team join emerald @r[team=random]
 
-execute if entity @a[team=random,limit=1] run function ex3:game/team_random/2team
+execute if entity @a[team=random,limit=1] run function ex3:game/team/random/2team
 
 
 
